@@ -1021,7 +1021,7 @@ func (chain *Blockchain) ApplyTxOnState(appState *appstate.AppState, vm vm.VM, t
 	case types.OnlineStatusTx:
 		collector.BeginTxBalanceUpdate(statsCollector, tx, appState)
 		defer collector.CompleteBalanceUpdate(statsCollector, appState)
-		stateDB.ToggleStatusSwitchAddress(sender)
+		//stateDB.ToggleStatusSwitchAddress(sender)
 	case types.ChangeGodAddressTx:
 		collector.BeginTxBalanceUpdate(statsCollector, tx, appState)
 		defer collector.CompleteBalanceUpdate(statsCollector, appState)
